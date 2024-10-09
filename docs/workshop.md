@@ -1,5 +1,5 @@
 ---
-published: false                        # Optional. Set to true to publish the workshop (default: false)
+published: true                        # Optional. Set to true to publish the workshop (default: false)
 type: workshop                          # Required.
 title: Running LLM models in AKS             # Required. Full title of the workshop
 short_title: Deploying LLM models into AKS                # Optional. Short title displayed in the header
@@ -55,12 +55,18 @@ docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 
 ### 2.2. Run Microsoft `Phi3.5` LLM model on ollama
 
+Youwill need to exec into the `ollama` container to run the LLM model. Here is how to exec into the `ollama` container and run the `phi3.5` model.
+
 ```sh
 docker exec -it ollama sh -c 'ollama run phi3.5'
-# then ctrl + d to exit
 ```
 
+You can then chat with the model by typing your message and pressing `enter`.
+Press `ctrl + d` to exit.
+
 ### 2.3. Run `Open-WebUI` client app
+
+You will also run the client application `Open-WebUI` to chat with the model. The client app is available as a `docker` container. Here are the steps to run the `Open-WebUI` client app.
 
 ```sh
 docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway -v open-webui:/app/backend/data -e WEBUI_AUTH=False --name open-webui --restart always ghcr.io/open-webui/open-webui:main
