@@ -1,16 +1,16 @@
 ---
 published: false                        # Optional. Set to true to publish the workshop (default: false)
 type: workshop                          # Required.
-title: Full workshop title              # Required. Full title of the workshop
-short_title: Short title                # Optional. Short title displayed in the header
-description: This is a workshop for...  # Required.
+title: Running LLM models in AKS             # Required. Full title of the workshop
+short_title: LLMs with AKS                # Optional. Short title displayed in the header
+description: This is a workshop for learning ow to deploy LLM models into an AKS cluster  # Required.
 level: beginner                         # Required. Can be 'beginner', 'intermediate' or 'advanced'
 authors:                                # Required. You can add as many authors as needed      
-  - Name
+  - Houssem Dellai
 contacts:                               # Required. Must match the number of authors
-  - Author's email, Twitter...
+  - houssem.dellai@microsoft.com
 duration_minutes: 20                    # Required. Estimated duration in minutes
-tags: javascript, api, node.js          # Required. Tags for filtering and searching
+tags: LLM, ai, containers, AKS, kubernetes          # Required. Tags for filtering and searching
 #banner_url: assets/banner.jpg           # Optional. Should be a 1280x640px image
 #video_url: https://youtube.com/link     # Optional. Link to a video of the workshop
 #audience: students                      # Optional. Audience of the workshop (students, pro devs, etc.)
